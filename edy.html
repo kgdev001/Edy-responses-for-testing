@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    let video_id= "3cce04e1-9884-4b86-9a96-e97afda26fa1"
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=power`)
+  .then(response => response.json())
+  .then(data => console.log(`power`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=filler_words`)
+  .then(response => response.json())
+  .then(data => console.log(`filler words`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=looking_at_camera`)
+  .then(response => response.json())
+  .then(data => console.log(`eye contact`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=praat_output`)
+  .then(response => response.json())
+  .then(data => console.log(`pauses`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=repeated_words`)
+  .then(response => response.json())
+  .then(data => console.log(`repeated words`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=sentiment`)
+  .then(response => response.json())
+  .then(data => console.log(`sentiments`,data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=smiling`)
+  .then(response => response.json())
+  .then(data => console.log(`smile`, data));
+
+  fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=speech_rate`)
+  .then(response => response.json())
+  .then(data => console.log(`speach rate` ,data));
+</script>
+</html>
