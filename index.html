@@ -10,7 +10,7 @@
 </body>
 
 <script>
-    let video_id= "3cce04e1-9884-4b86-9a96-e97afda26fa1"
+    let video_id= "91dff871-ee82-40cd-96b5-6b24f5f21165"
   fetch(`https://us-central1-edy-api-320115.cloudfunctions.net/edy_analysis_result?video_id=${video_id}&user_id=1&property=power`)
   .then(response => response.json())
   .then(data => console.log(`power`,data));
